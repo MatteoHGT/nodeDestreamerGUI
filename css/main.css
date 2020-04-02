@@ -1,0 +1,83 @@
+/* bengali */
+@font-face {
+    font-family: 'Baloo Da 2';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('Baloo Da 2 SemiBold'), local('BalooDa2-SemiBold'), url(../fonts/2-ch9J9j0IaUMQZwAJyJSjb5tYxiYl3z.woff2) format('woff2');
+    unicode-range: U+0964-0965, U+0981-09FB, U+200C-200D, U+20B9, U+25CC;
+}
+/* vietnamese */
+@font-face {
+    font-family: 'Baloo Da 2';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('Baloo Da 2 SemiBold'), local('BalooDa2-SemiBold'), url(../fonts/2-ch9J9j0IaUMQZwAJyJSjb5tZFiYl3z.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Baloo Da 2';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('Baloo Da 2 SemiBold'), local('BalooDa2-SemiBold'), url(../fonts/2-ch9J9j0IaUMQZwAJyJSjb5tZBiYl3z.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Baloo Da 2';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('Baloo Da 2 SemiBold'), local('BalooDa2-SemiBold'), url(../fonts/2-ch9J9j0IaUMQZwAJyJSjb5tZ5iYg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+    font-family: 'Baloo Da 2', cursive;
+    overflow: hidden;
+}
+
+#username-label {
+    position: relative;
+    left: 28px;
+}
+
+#username-input {
+    margin-left: 28px;
+}
+
+#first-video-container {
+    margin-top: 30px;
+}
+
+.video-link-container {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    top: -410px;
+}
+
+#username-container {
+    margin-top: 20px;
+}
+
+#download-btn {
+    height: 30px;
+    width: 200px;
+    position: relative;
+    left: 52px;
+    top: -403px;
+    font-family: 'Baloo Da 2', cursive;
+}
+
+#output-area {
+    position: relative;
+    left: 275px;
+    top: -24px;
+    width: 350px;
+    height: 400px;
+    border: 3px black solid;
+}

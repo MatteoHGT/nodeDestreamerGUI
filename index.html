@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./css/main.css"></link>
+    </head>
+    <body>
+        <div id="container">
+            <div id="username-container">
+                <label id="username-label" for="username-input" class="label">E-mail: </label>
+                <input id="username-input" type="text" pattern="">
+                </input>
+            </div>
+            <div id="output-area">
+            </div>
+            <div id="first-video-container" class="video-link-container">
+                <label for="video-link-one" class="label">Video URL: </label>
+                <input id="video-link-one" class="video-link" type="text" pattern="">
+                </input>
+            </div>
+            <div class="video-link-container">
+                <label for="video-link-two" class="label">Video URL: </label>
+                <input id="video-link-two" class="video-link" type="text" pattern="">
+                </input>
+            </div>
+            <div class="video-link-container">
+                <label for="video-link-three" class="label">Video URL: </label>
+                <input id="video-link-three" class="video-link" type="text" pattern="">
+                </input>
+            </div>
+            <div class="video-link-container">
+                <label for="video-link-four" class="label">Video URL: </label>
+                <input id="video-link-four" class="video-link" type="text" pattern="">
+                </input>
+            </div>
+            <div class="video-link-container">
+                <label for="video-link-five" class="label">Video URL: </label>
+                <input id="video-link-five" class="video-link" type="text" pattern="">
+                </input>
+            </div>
+            <div class="video-link-container">
+                <label for="video-link-six" class="label">Video URL: </label>
+                <input id="video-link-six" class="video-link" type="text" pattern="">
+                </input>
+            </div>
+            <div class="video-link-container">
+                <label for="video-link-seven" class="label">Video URL: </label>
+                <input id="video-link-seven" class="video-link" type="text" pattern="">
+                </input>
+            </div>
+            <div class="video-link-container">
+                <label for="video-link-eight" class="label">Video URL: </label>
+                <input id="video-link-eight" class="video-link" type="text" pattern="">
+                </input>
+            </div>
+            <div class="video-link-container">
+                <label for="video-link-nine" class="label">Video URL: </label>
+                <input id="video-link-nine" class="video-link" type="text" pattern="">
+                </input>
+            </div>
+            <div class="video-link-container">
+                <label for="video-link-ten" class="label">Video URL: </label>
+                <input id="video-link-ten" class="video-link" type="text" pattern="">
+                </input>
+            </div>
+            <div id="button-download-container">
+                <button id="download-btn">
+                    Download
+                </button>
+            </div>
+        </div>
+        <script>
+            const { ipcRenderer } = require('electron');
+            var $ = require('jquery');
+            ipcRenderer.on('commandExecuted', (event, arg) => {
+                $("#output-command").html(arg)
+                console.log(arg);
+            });
+            $("#download-btn").on('click', () => {
+                let userName = $("#username-input").val();
+                let videoElements = $("input.video-link");
+                console.log(videoElements);
+                let videoUrls = [];
+                for(let i = 0; i < videoElements.length; ++i)
+                {
+                    if($(videoElements[i]).val().trim() != "")
+                        videoUrls.push($(videoElements[i]).val());
+                }
+                let jsonData = JSON.stringify({"userName": userName, "videoUrls": videoUrls});
+                console.log(jsonData);
+                ipcRenderer.send('commandExecuted', jsonData);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "destreamer-gui",
+  "version": "1.0.0",
+  "description": "This is a GUI for destreamer project by snobu",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Giordano Sconti",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "electron": "^8.2.0",
+    "jquery": "^3.4.1",
+    "puppeteer": "^2.1.1",
+    "sanitize-filename": "^1.6.3",
+    "terminal-kit": "^1.35.2",
+    "typescript": "^3.8.3",
+    "yargs": "^15.0.3"
+  },
+  "devDependencies": {
+    "@types/puppeteer": "^1.20.0",
+    "@types/terminal-kit": "^1.28.1",
+    "@types/yargs": "^15.0.3",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "eslint": "^6.8.0"
+  }
+}
