@@ -72,13 +72,11 @@
             const { ipcRenderer } = require('electron');
             var $ = require('jquery');
             ipcRenderer.on('commandExecuted', (event, arg) => {
-                $("#output-command").html(arg)
-                console.log(arg);
+                $("#output-area").html(arg);
             });
             $("#download-btn").on('click', () => {
                 let userName = $("#username-input").val();
                 let videoElements = $("input.video-link");
-                console.log(videoElements);
                 let videoUrls = [];
                 for(let i = 0; i < videoElements.length; ++i)
                 {
@@ -86,7 +84,6 @@
                         videoUrls.push($(videoElements[i]).val());
                 }
                 let jsonData = JSON.stringify({"userName": userName, "videoUrls": videoUrls});
-                console.log(jsonData);
                 ipcRenderer.send('commandExecuted', jsonData);
             });
         </script>
