@@ -6,7 +6,7 @@ var outputDirectory = "videos";
 if(!fs.existsSync("./videos"))
     fs.mkdirSync("./videos");
 if(!fs.existsSync("./destreamer.js")){
-    console.log("You should download destreamer before using this program.")
+    console.error("You should download destreamer before using this program.");
     app.quit();
 }
 ipcMain.on('commandExecuted', (event, arg) => {
