@@ -58,6 +58,8 @@ body {
     margin-bottom: 5px;
     position: relative;
     top: -410px;
+    width: 270px;
+    margin-right: 5px;
 }
 
 #username-container {
@@ -80,4 +82,10 @@ body {
     width: 350px;
     height: 400px;
     border: 3px black solid;
+    overflow-y: scroll;
+    word-wrap: break-word;
+    text-align: left;
+    font-size: 12px;
+    font-size: 0.75rem;
+    text-justify: inter-character;
 }
