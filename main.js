@@ -35,18 +35,21 @@ ipcMain.on('commandExecuted', (event, arg) => {
     }
 });
 async function runWindow() {
-    let browserWindow = new BrowserWindow({
+    var browserWindow = new BrowserWindow({
         width: 680,
         height: 520,
         resizable: false,
         minHeight: 520,
         maxHeight: 520,
-        minWidth: 420,
-        maxWidth: 420,
+        minWidth: 680,
+        maxWidth: 680,
         maximizable: false,
         webPreferences: {
             nodeIntegration: true
         }
+    });
+    browserWindow.on("will-resize", (event) => {
+        event.preventDefault();
     });
     await session.defaultSession.clearStorageData();
     await session.defaultSession.clearCache();
